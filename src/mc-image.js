@@ -85,7 +85,10 @@ export default class McImage extends MjImage {
           title: this.getAttribute('title'),
           width: this.getContentWidth(),
           usemap: this.getAttribute('usemap'),
-          class: 'mc-image',
+          'mc:edit': this.getAttribute('mc:edit'),
+          'mc:hideable': this.getAttribute('mc:hideable')
+            ? 'mc:hideable'
+            : null,
         })}
       />
     `;
