@@ -50,12 +50,12 @@ export default class McImage extends MjImage {
         'font-size': this.getAttribute('font-size'),
       },
       td: {
-        width: fullWidth ? null : `${parsedWidth}${unit}`,
+        width: fullWidth ? null : `${parsedWidth}${unit} !important`,
       },
       table: {
         'min-width': fullWidth ? '100%' : null,
         'max-width': fullWidth ? '100%' : null,
-        width: fullWidth ? `${parsedWidth}${unit}` : null,
+        width: fullWidth ? `${parsedWidth}${unit} !important` : null,
         'border-collapse': 'collapse',
         'border-spacing': '0px',
       },
