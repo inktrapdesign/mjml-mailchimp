@@ -45,7 +45,7 @@ export default class McImage extends MjImage {
         height: this.getAttribute('height'),
         'max-height': this.getAttribute('max-height'),
         'min-width': fullWidth ? '100%' : null,
-        width: '100%',
+        width: `${parsedWidth}${unit}`,
         'max-width': fullWidth ? '100%' : null,
         'font-size': this.getAttribute('font-size'),
       },
