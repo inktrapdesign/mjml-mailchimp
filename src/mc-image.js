@@ -16,7 +16,7 @@ export default class McImage extends MjImage {
     ...MjImage.allowedAttributes,
     'mc:edit': 'string',
     'mc:hideable': 'string',
-    'full-width': 'boolean',
+    'full-width': 'string',
   };
 
   static defaultAttributes = {
