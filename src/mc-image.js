@@ -16,13 +16,13 @@ export default class McImage extends MjImage {
     ...MjImage.allowedAttributes,
     'mc:edit': 'string',
     'mc:hideable': 'string',
-    'full-width': 'string',
+    'full-width': 'boolean',
   };
 
   static defaultAttributes = {
     ...MjImage.defaultAttributes,
     'mc:hideable': false,
-    'full-width': false,
+    'full-width': false
   };
 
   getStyles() {
@@ -45,17 +45,17 @@ export default class McImage extends MjImage {
         height: this.getAttribute('height'),
         'max-height': this.getAttribute('max-height'),
         'min-width': fullWidth ? '100%' : null,
-        width: `${parsedWidth}${unit}`,
+        width: '100%',
         'max-width': fullWidth ? '100%' : null,
         'font-size': this.getAttribute('font-size'),
       },
       td: {
-        width: `${parsedWidth}${unit}`,
+        width: fullWidth ? null : `${parsedWidth}${unit}`,
       },
       table: {
         'min-width': fullWidth ? '100%' : null,
         'max-width': fullWidth ? '100%' : null,
-        width: `${parsedWidth}${unit}`,
+        width: fullWidth ? `${parsedWidth}${unit}` : null,
         'border-collapse': 'collapse',
         'border-spacing': '0px',
       },
